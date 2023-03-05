@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Product</th>
+        <th>Product_ID</th>
+        <th>Product_Quantity</th>
+        <th>Product_Location</th>
+        <th>Product_Loc_Id</th>
+        <th>Product_warehouse</th>
+   
+    </tr>
+    {% for i in dis %}
+    <tr>
+        <td>{{ i.id }}</td>
+        <td>{{ i.Product }}</td>
+        <td>{{ i.Product_ID }}</td>
+        <td>{{ i.Product_Quantity }}</td>
+        <td>{{ i.Product_Location }}</td>
+        <td>{{ i.Product_Loc_Id }}</td>
+        <td>{{ i.Product_warehouse }}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

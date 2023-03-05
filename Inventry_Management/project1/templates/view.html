@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>Customer_Name</th>
+                <th>Product_Name</th>
+                <th>Product_ID</th>
+                <th>Quantity</th>
+                <th>Location_Name</th>
+                <th>Update</th>
+           
+            </tr>
+            {% for i in data %}
+            <tr>
+                <td>{{ i.id }}</td>
+                <td>{{ i.Customer_Name }}</td>
+                <td>{{ i.Product_Name }}</td>
+                <td>{{ i.Product_ID }}</td>
+                <td>{{ i.Quantity }}</td>
+                <td>{{ i.Location_Name }}</td>
+                <td><a href="http://127.0.0.1:8000/update/{{i.id}}">Update</a></td>
+             
+            </tr>
+            {% endfor %}
+        </table>
+{% endblock %}
+
+

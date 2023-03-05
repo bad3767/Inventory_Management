@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<table class="table">
+    <tr>
+        <th>Location_Name</th>
+        <th>Location_ID</th>
+        <th>Warehouse_No</th>
+    </tr>
+    {% for i in data1 %}
+    <tr>
+        <td>{{ i.Location_Name }}</td>
+        <td>{{ i.Location_ID }}</td>
+        <td>{{ i.Warehouse_No }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
